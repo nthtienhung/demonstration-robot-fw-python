@@ -47,7 +47,6 @@ demonstration-robot-fw-python/
 │   └── results/                # Test reports
 ├── config/config.yaml          # Configuration
 ├── requirements.txt
-└── CLAUDE.md                   # Detailed documentation
 ```
 
 ## Features
@@ -96,7 +95,6 @@ visual:
 
 ## Documentation
 
-- **CLAUDE.md** - Detailed documentation for developers
 - **config/config.yaml** - Configuration reference
 - **robot-tests/results/report.html** - Test execution report
 
