@@ -1,0 +1,36 @@
+# Robot Framework Test Automation Configuration
+# Target Site: https://the-internet.herokuapp.com
+
+ui:
+  base_url: "https://the-internet.herokuapp.com"
+  browser: "chrome"
+  headless: true
+  timeout: 10s
+  screenshot_on_failure: true
+  screenshot_dir: "robot-tests/results/screenshots"
+  implicit_wait: 5s
+
+api:
+  base_url: "https://jsonplaceholder.typicode.com"
+  timeout: 30s
+  verify_ssl: true
+
+visual:
+  threshold: 0.95
+  baseline_dir: "custom-libraries/VisualValidator/baseline"
+  current_dir: "robot-tests/results/screenshots/current"
+  diff_dir: "robot-tests/results/screenshots/diff"
+  comparison_method: "ssim"  # Options: ssim, mse, pixel_diff
+
+test_data:
+  default_user:
+    username: "tomsmith"
+    password: "SuperSecretPassword!"
+  invalid_user:
+    username: "invalid_user"
+    password: "wrong_password"
+
+execution:
+  log_level: "INFO"
+  output_dir: "robot-tests/results"
+  variables_file: "config/test_data.json"
